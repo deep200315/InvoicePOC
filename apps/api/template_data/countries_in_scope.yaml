@@ -1,0 +1,9 @@
+# Countries shown on Home, in display order. Codes are quoted: YAML reads a bare NO as false.
+# Owner: Deeptanush (Tech Lead) · Task: T-102
+countries:
+  - { code: "RO", name: "Romania" }
+  - { code: "NO", name: "Norway" }
+  - { code: "RU", name: "Russia" }
+  - { code: "UA", name: "Ukraine" }
+  - { code: "NP", name: "Nepal" }
+  - { code: "IN", name: "India" }
