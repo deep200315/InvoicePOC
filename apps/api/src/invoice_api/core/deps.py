@@ -7,9 +7,11 @@ from collections.abc import AsyncIterator
 from typing import Annotated
 
 from fastapi import Depends, Request
+from fastapi.security import HTTPAuthorizationCredentials
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from invoice_api.core.config import Settings, get_settings
+from invoice_api.core.security import CurrentUser, authenticate, bearer_scheme
 from invoice_api.storage.base import BlobStore
 
 SettingsDep = Annotated[Settings, Depends(get_settings)]
@@ -35,3 +37,13 @@ def get_blob_store(request: Request) -> BlobStore:
 
 
 BlobStoreDep = Annotated[BlobStore, Depends(get_blob_store)]
+
+
+async def get_current_user(
+    request: Request,
+    credentials: Annotated[HTTPAuthorizationCredentials | None, Depends(bearer_scheme)],
+) -> CurrentUser:
+    return await authenticate(request, credentials)
+
+
+CurrentUserDep = Annotated[CurrentUser, Depends(get_current_user)]
