@@ -1,0 +1,6 @@
+# Romania country profile: template link, layout anchors (zones per section), overrides.
+# Owner: Kuhu (Backend · documents) · Task: T-306
+country: RO
+name: Romania
+template: global_proforma@1
+anchors: {}

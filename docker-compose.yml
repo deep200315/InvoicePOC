@@ -1,0 +1,13 @@
+# Local stack. Owner: Harsh (Full-stack · QA + DevOps) · Task: T-115
+# api + web services are added in T-115; postgres works from day one.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: invoice
+      POSTGRES_PASSWORD: invoice
+      POSTGRES_DB: invoice
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+volumes:
+  pgdata:

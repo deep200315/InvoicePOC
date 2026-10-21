@@ -1,0 +1,10 @@
+/* Design tokens from Figma (Brand · Logo / Colour). Owner: Gunavanth (Frontend) · Task: T-111 */
+:root {
+  --color-navy: #1a2b8f;
+  --color-primary: #1f4bd8;
+  --color-bright: #3b7bff;
+  --color-fold: #a9c4ff;
+  --color-tint: #eaf0ff;
+  --color-ink: #18181c;
+  --color-error: #d92d20; /* reserved for what must be fixed */
+}

@@ -1,0 +1,143 @@
+# Global Proforma Invoice template, v1.
+# Seeded from the Figma design (Compare / Requirements screens): 31 fields in 5 sections.
+# priority: mandatory | standard | advisory | tbc  ('tbc' = awaiting product-owner sign-off, task T-006).
+# Owner: Deeptanush (Tech Lead) · Task: T-104
+id: global_proforma
+version: 1
+title: Global Proforma Invoice
+sections:
+  - id: header
+    fields:
+      - id: document_title
+        label: "Document title"
+        priority: advisory
+        format: text
+        expected_value: "Proforma Invoice"
+      - id: export_reference
+        label: "Export reference"
+        priority: tbc
+        format: text
+      - id: date_of_exportation
+        label: "Date of exportation"
+        priority: standard
+        format: date_iso
+      - id: tracking_number
+        label: "Tracking / PRO / Parcel no."
+        priority: mandatory
+        format: text
+      - id: protocol_number
+        label: "Protocol #"
+        priority: tbc
+        format: text
+      - id: copy_status
+        label: "Copy status"
+        priority: tbc
+        format: enum:Original|Copy
+  - id: parties
+    fields:
+      - id: ship_from
+        label: "Ship from"
+        priority: mandatory
+        format: address
+      - id: seller
+        label: "Seller"
+        priority: tbc
+        format: address
+      - id: payer
+        label: "Payer"
+        priority: tbc
+        format: address
+      - id: bill_to
+        label: "Bill to"
+        priority: tbc
+        format: address
+      - id: sold_to
+        label: "Sold to"
+        priority: tbc
+        format: address
+      - id: ship_to
+        label: "Ship to"
+        priority: tbc
+        format: address
+      - id: importer_of_record
+        label: "Importer of record"
+        priority: tbc
+        format: address
+      - id: remit_to
+        label: "Remit to"
+        priority: advisory
+        format: address
+  - id: licences
+    fields:
+      - id: export_licence
+        label: "Export licence (no. + expiry YYYY-MM-DD)"
+        priority: mandatory
+        format: licence
+      - id: import_licence
+        label: "Import licence no."
+        priority: mandatory
+        format: text
+  - id: order
+    fields:
+      - id: personalized_medicine_id
+        label: "Personalized Medicine ID"
+        priority: mandatory
+        format: text
+      - id: purchase_order_number
+        label: "Purchase order no."
+        priority: tbc
+        format: text
+      - id: order_number
+        label: "Order no."
+        priority: tbc
+        format: text
+      - id: shipping_order_number
+        label: "Shipping order no."
+        priority: tbc
+        format: text
+  - id: line_items
+    fields:
+      - id: sku
+        label: "SKU"
+        priority: tbc
+        format: text
+      - id: description
+        label: "Description"
+        priority: tbc
+        format: text
+      - id: ncv_code
+        label: "NCV"
+        priority: tbc
+        format: code
+      - id: batch_pcn
+        label: "Batch / PCN"
+        priority: mandatory
+        format: text
+      - id: quantity
+        label: "Qty"
+        priority: tbc
+        format: decimal_2
+      - id: uom
+        label: "UOM"
+        priority: tbc
+        format: code
+      - id: total_volume
+        label: "Total vol"
+        priority: mandatory
+        format: decimal_3
+      - id: unit_weight
+        label: "Unit wt"
+        priority: tbc
+        format: decimal_3
+      - id: currency
+        label: "Currency"
+        priority: mandatory
+        format: iso_4217
+      - id: unit_price
+        label: "Unit price"
+        priority: tbc
+        format: decimal_2
+      - id: sub_total
+        label: "Sub total"
+        priority: tbc
+        format: decimal_2

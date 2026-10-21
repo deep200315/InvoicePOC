@@ -1,0 +1,6 @@
+# Norway country profile: template link, layout anchors (zones per section), overrides.
+# Owner: Kuhu (Backend · documents) · Task: T-306
+country: NO
+name: Norway
+template: global_proforma@1
+anchors: {}

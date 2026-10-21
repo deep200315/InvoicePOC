@@ -1,0 +1,4 @@
+# Norway label aliases -> global field ids. Fill from the NO golden invoices (T-106).
+# Owner: Kuhu (Backend · documents) · Task: T-209
+country: NO
+aliases: {}

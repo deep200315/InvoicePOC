@@ -1,0 +1,64 @@
+# Romania label aliases -> global field ids.
+# Seeded from the Romania sample invoice in Figma; verify against the golden set (T-105).
+# Owner: Kuhu (Backend · documents) · Task: T-209
+country: RO
+aliases:
+  document_title:
+    - "PROFORMA"
+  export_reference:
+    - "Export References:"
+  date_of_exportation:
+    - "Date Of Exportation:"
+  tracking_number:
+    - "Tracking (Number)(PRO#/Parcel#):"
+  protocol_number:
+    - "Protocol#:"
+  ship_from:
+    - "SHIP FROM:"
+  remit_to:
+    - "REMIT TO:"
+  payer:
+    - "PAYER:"
+  bill_to:
+    - "BILL TO:"
+  seller:
+    - "SELLER:"
+  export_licence:
+    - "Export Lic:"
+    - "Exp.Date:"
+  sold_to:
+    - "SOLD TO:"
+  ship_to:
+    - "SHIP TO:"
+  importer_of_record:
+    - "IMPORTER OF RECORD:"
+  import_licence:
+    - "Import Lic:"
+  personalized_medicine_id:
+    - "Personalized Medicine ID:"
+  purchase_order_number:
+    - "PURCHASE ORDER NO:"
+  order_number:
+    - "ORDER NO:"
+  shipping_order_number:
+    - "SHIPPING ORDER NO:"
+  sku:
+    - "SKU"
+  description:
+    - "DESCRIPTION"
+  ncv_code:
+    - "NCV CODE"
+  batch_pcn:
+    - "BATCH/ PCN"
+  quantity:
+    - "QUANTITY"
+  uom:
+    - "UOM"
+  total_volume:
+    - "TOTAL VOL"
+  unit_weight:
+    - "UNIT WEIGHT"
+  unit_price:
+    - "UNIT PRICE"
+  sub_total:
+    - "SUB TOTAL"

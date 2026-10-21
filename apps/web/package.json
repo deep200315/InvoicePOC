@@ -1,0 +1,47 @@
+{
+  "name": "invoice-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "typecheck": "tsc -b --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "gen:api": "openapi-typescript ../api/openapi.json -o src/types/api.gen.ts"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.26.1",
+    "@azure/msal-react": "^2.1.1",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@tanstack/react-query": "^5.59.16",
+    "@tanstack/react-router": "^1.79.0",
+    "clsx": "^2.1.1",
+    "openapi-fetch": "^0.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-pdf": "^9.1.1",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@testing-library/react": "^16.0.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.14.0",
+    "msw": "^2.6.0",
+    "openapi-typescript": "^7.4.2",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}
