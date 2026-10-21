@@ -14,6 +14,7 @@ from invoice_api.core.config import Settings, get_settings
 from invoice_api.core.errors import register_error_handlers
 from invoice_api.core.spa import mount_spa
 from invoice_api.db.session import build_engine, build_session_factory
+from invoice_api.storage.factory import build_blob_store
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -33,6 +34,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     app.state.engine = engine
     app.state.session_factory = build_session_factory(engine)
+    app.state.blob_store = build_blob_store(settings)
     app.dependency_overrides[get_settings] = lambda: settings
     app.add_middleware(
         CORSMiddleware,

@@ -10,6 +10,7 @@ from fastapi import Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from invoice_api.core.config import Settings, get_settings
+from invoice_api.storage.base import BlobStore
 
 SettingsDep = Annotated[Settings, Depends(get_settings)]
 
@@ -26,3 +27,11 @@ async def get_session(request: Request) -> AsyncIterator[AsyncSession]:
 
 SessionDep = Annotated[AsyncSession, Depends(get_session)]
 SessionFactoryDep = Annotated[async_sessionmaker[AsyncSession], Depends(get_session_factory)]
+
+
+def get_blob_store(request: Request) -> BlobStore:
+    store: BlobStore = request.app.state.blob_store
+    return store
+
+
+BlobStoreDep = Annotated[BlobStore, Depends(get_blob_store)]
